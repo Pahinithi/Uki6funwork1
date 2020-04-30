@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <script src="https://connect.soundcloud.com/sdk.js"></script> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script src="jquery-3.4.1.js"></script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+  <script src="Hindi.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.b2 {display: block;
+     float: left;
+     width: 20%;
+     margin-bottom: 10px;
+     padding: 5px;}
+
+
+     marquee{
+           font-size: 30px;
+           font-weight: 800;
+           color:red;
+           font-family: sans-serif;
+     }
+
+
+     * {
+       box-sizing: border-box;
+     }
+
+     .zoom {
+       padding: 0px;
+       background-color: green;
+       transition: transform .2s;
+       width: 200px;
+       height: 200px;
+       margin: 0 auto;
+     }
+
+     .zoom:hover {
+       -ms-transform: scale(1.5); /* IE 9 */
+       -webkit-transform: scale(1.5); /* Safari 3-8 */
+       transform: scale(1.5);
+     }
+
+
+
+     .overlay {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1;
+       top: 0;
+       left: 0;
+       background-color: rgb(0,0,0);
+       background-color: rgba(0,0,0, 0.9);
+       overflow-x: hidden;
+       transition: 0.5s;
+     }
+
+     .overlay-content {
+       position: relative;
+       top: 25%;
+       width: 100%;
+       text-align: center;
+       margin-top: 30px;
+     }
+
+     .overlay a {
+       padding: 8px;
+       text-decoration: none;
+       font-size: 36px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+     }
+
+     .overlay a:hover, .overlay a:focus {
+       color: #f1f1f1;
+     }
+
+     .overlay .closebtn {
+       position: absolute;
+       top: 20px;
+       right: 45px;
+       font-size: 60px;
+     }
+
+     @media screen and (max-height: 450px) {
+       .overlay a {font-size: 20px}
+       .overlay .closebtn {
+       font-size: 40px;
+       top: 15px;
+       right: 35px;
+       }
+     }
+
+     .col{background-color:lightblue;}
+     .col2{background-color:white;}
+
+
+     input[type=text] {
+       width: 130px;
+       box-sizing: border-box;
+       border: 2px solid #ccc;
+       border-radius: 4px;
+       font-size: 16px;
+       background-color: white;
+       background-image: url('searchicon.png');
+       background-position: 10px 10px;
+       background-repeat: no-repeat;
+       padding: 12px 20px 12px 40px;
+       -webkit-transition: width 0.4s ease-in-out;
+       transition: width 0.4s ease-in-out;
+     }
+
+     input[type=text]:focus {
+       width: 380%;
+     }
+     .fol{float:right;}
+
+
+     body {
+       background-image: url('image/index.jpg');
+     }
+
+
+
+
+</style>
+</head>
+<body>
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="Tamil.html">Tamil Songs</a>
+      <a href="malayam.html">Malayalam Songs</a>
+      <a href="telgu.html">Telugu Songs</a>
+      <a href="Kannada Songs.html">Kannada Songs</a>
+      <a href="Hindi Songs.html">Hindi Songs</a>
+      <a href="Artist Songs.html">Artist </a>
+      <a href="About us.html">About us</a>
+    </div>
+  </div>
+
+  <form class="fol">
+    <input type="text" name="search" placeholder="Search..">
+  </form>
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <center> Welcome to Hindi Songs </center></span>
+
+
+
+
+
+<div> <br><br><br>
+
+
+
+                                       <!-- Song 01  Start -->
+
+  <div class="column">
+    <div class="card">
+    <h3>Saree Ke Fall Sa  </h3>
+    <img src="image/hqdefault.jpg" height="250px" width="250px" class="zoom"><br>
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Click Song </button>
+<!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Saree Ke Fall Sa  </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+         <button type="button" class="btn btn-outline-info" id="start-hi1">Play</button>
+         <button type="button" class="btn btn-outline-info" id="stop-hi1">Stop</button>
+         <button type="button" class="btn btn-outline-info" style="float:right"> <a href="https://www.youtube.com/watch?v=EkxOXF9J77w" target="_blank"> Watch Video Song </a></button>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+                                           <!-- Song 01  end -->
+
+
+
+
+                                           <!-- Song 02  Start -->
+
+                                           <div class="column">
+                                           <div class="card">
+                                             <h3>Badri Ki Dulhania</h3>
+                                           <img src="image/crop_480x480_1516001052.jpg" height="250px" width="250px"class="zoom"><br>
+
+                                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1"> Click Song </button>
+                                           <!-- The Modal -->
+                                           <div class="modal" id="myModal1">
+                                           <div class="modal-dialog">
+                                           <div class="modal-content">
+
+                                           <!-- Modal Header -->
+                                           <div class="modal-header">
+                                           <h4 class="modal-title">Badri Ki Dulhania</h4>
+                                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                           </div>
+
+                                           <!-- Modal body -->
+                                           <div class="modal-body">
+                                           <button type="button" class="btn btn-outline-info"id="start-hi2">Play</button>
+                                           <button type="button" class="btn btn-outline-info"id="stop-hi2">Stop</button>
+                                           <button type="button" class="btn btn-outline-info" style="float:right"> <a href="https://youtu.be/1YBl3Zbt80A" target="_blank">Watch Video Song </a></button>
+                                           </div>
+
+                                           <!-- Modal footer -->
+                                           <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                           </div>
+
+                                           </div>
+                                           </div>
+                                           </div>
+
+                                           </div>
+                                           </div>
+
+                                               <!-- Song 02  end -->
+
+
+
+
+
+                                               <!-- Song 03 start -->
+
+                                               <div class="column">
+                                               <div class="card">
+                                                 <h3>Jai Jai Shivshankar</h3>
+                                               <img src="image/maxresdefault (8).jpg" height="250px" width="250px"class="zoom"><br>
+
+                                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2"> Click Song </button>
+                                               <!-- The Modal -->
+                                               <div class="modal" id="myModal2">
+                                               <div class="modal-dialog">
+                                               <div class="modal-content">
+
+                                               <!-- Modal Header -->
+                                               <div class="modal-header">
+                                               <h4 class="modal-title">Jai Jai Shivshankar</h4>
+                                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                               </div>
+
+                                               <!-- Modal body -->
+                                               <div class="modal-body">
+                                               <button type="button" class="btn btn-outline-info"id="start-hi3">Play</button>
+                                               <button type="button" class="btn btn-outline-info"id="stop-hi3">Stop</button>
+                                               <button type="button" class="btn btn-outline-info" style="float:right"> <a href="https://youtu.be/oGneAab3e88" target="_blank">Watch Video Song </a></button>
+                                               </div>
+
+                                               <!-- Modal footer -->
+                                               <div class="modal-footer">
+                                               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                               </div>
+
+                                               </div>
+                                               </div>
+                                               </div>
+
+                                               </div>
+                                               </div>
+
+
+                                                       <!-- Song 03  end -->
+
+
+
+
+
+                                                          <!-- Song 04 start -->
+
+
+                                               <div class="column">
+                                               <div class="card">
+                                                 <h3>Chammak Challo</h3>
+                                               <img src="image/maxresdefault (9).jpg" height="250px" width="250px"class="zoom"><br>
+
+                                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"> Click Song </button>
+                                               <!-- The Modal -->
+                                               <div class="modal" id="myModal3">
+                                               <div class="modal-dialog">
+                                               <div class="modal-content">
+
+                                               <!-- Modal Header -->
+                                               <div class="modal-header">
+                                               <h4 class="modal-title">Chammak Challo</h4>
+                                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                               </div>
+
+                                               <!-- Modal body -->
+                                               <div class="modal-body">
+                                               <button type="button" class="btn btn-outline-info"id="start-hi4">Play</button>
+                                               <button type="button" class="btn btn-outline-info"id="stop-hi4">Stop</button>
+                                               <button type="button" class="btn btn-outline-info" style="float:right"><a href="https://youtu.be/M4EZHGFK-1c" target="_blank"> Watch Video Song </a></button>
+                                               </div>
+
+                                               <!-- Modal footer -->
+                                               <div class="modal-footer">
+                                               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                               </div>
+
+                                               </div>
+                                               </div>
+                                               </div>
+
+                                               </div>
+                                               </div>
+
+
+
+
+                                                          <!-- Song 04 start -->
+
+  </div>
+
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+<!--
+  <button type="button" name="button" id="start-t2" class="btn btn-light w-25">play</button>
+-->
+
+</body>
+</html>
